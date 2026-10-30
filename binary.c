@@ -1,0 +1,22 @@
+// binary search taking user input.
+
+#include <stdio.h>
+
+int binarySearch(int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+
+        if (arr[mid] == target) {
+            return mid;          
+        }
+        else if (arr[mid] < target) {
+            low = mid + 1;       
+        }
+        else {
+            high = mid - 1;      
+        }
+    }
+}
